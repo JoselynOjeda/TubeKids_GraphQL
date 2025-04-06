@@ -1,38 +1,23 @@
-TubeKids Frontend
-Bienvenido al componente frontend del proyecto TubeKids, desarrollado como parte del curso de Programación en Ambiente Web II en la Universidad Técnica Nacional. Este sistema está diseñado para proporcionar una interfaz de usuario segura y efectiva para la gestión de contenidos audiovisuales destinados a niños.
+# TubeKids Frontend
 
-Descripción del Proyecto
-El frontend de TubeKids utiliza React para ofrecer una experiencia de usuario dinámica y está integrado con GraphQL para optimizar las consultas de datos. Esta combinación de tecnologías asegura que los padres puedan manejar eficientemente los contenidos que sus hijos pueden ver, facilitando una personalización extensiva y eficaz.
+Este repositorio contiene el componente frontend del proyecto TubeKids, elaborado para el curso de **Programación en Ambiente Web II** de la Universidad Técnica Nacional. El objetivo principal es proporcionar una plataforma segura y personalizable donde los padres pueden gestionar y controlar el contenido audiovisual que sus hijos visualizan.
 
-Características Principales
-Interfaz Reactiva: Utilizamos React para crear una interfaz de usuario que es tanto intuitiva como reactiva, adecuada para la interacción en tiempo real.
+## Tecnologías Utilizadas
 
-Integración de GraphQL: Implementamos GraphQL para facilitar consultas eficientes y específicas, lo que permite a los usuarios obtener exactamente lo que necesitan sin sobrecarga de datos.
+- **React**: Usado para construir una interfaz de usuario interactiva y reactiva.
+- **GraphQL**: Aplicado para optimizar las consultas y manipulaciones de datos desde el frontend.
 
-Seguridad y Control: El sistema está diseñado para permitir un control parental riguroso sobre los videos accesibles, asegurando un entorno de visualización seguro para los niños.
+## Configuración del Proyecto
 
-Instrucciones de Configuración
-Para configurar y lanzar el frontend de TubeKids, siga estos pasos:
+### Prerrequisitos
 
-Clone el repositorio:
+Antes de iniciar, asegúrate de tener instalado **Node.js** en tu sistema. Puedes descargarlo desde [Node.js official website](https://nodejs.org/).
 
-bash
-Copy
-git clone https://tu-repositorio/tubekids-frontend.git
-Navegue al directorio del proyecto e instale las dependencias necesarias:
+### Clonación e Instalación
 
-bash
-Copy
-cd tubekids-frontend
-npm install
-Inicie el servidor de desarrollo:
+Para configurar el proyecto localmente, sigue estos pasos:
 
-bash
-Copy
-npm start
-Acceda a la aplicación a través de http://localhost:3000 en su navegador web.
-
-Uso de GraphQL
-La implementación de GraphQL proporciona una interfaz potente para realizar búsquedas y recuperar datos, lo que resulta en una menor latencia y un mejor rendimiento del sistema.
-
-Agradecemos su interés en TubeKids y esperamos que encuentre la plataforma tanto funcional como beneficioso para la educación y entretenimiento seguro de los niños.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/tubekids-frontend.git
+   cd tubekids-frontend
