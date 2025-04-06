@@ -21,3 +21,7 @@ Para configurar el proyecto localmente, sigue estos pasos:
    ```bash
    git clone https://github.com/tu-usuario/tubekids-frontend.git
    cd tubekids-frontend
+
+## Uso de GraphQL
+El proyecto utiliza GraphQL para permitir consultas eficientes y específicas, mejorando la carga de datos y la experiencia del usuario al interactuar con la plataforma. Esto asegura que solo se transfieran los datos necesarios y relevantes, optimizando así el rendimiento y la velocidad de la aplicación.
+
