@@ -1,48 +1,50 @@
-# TubeKids Backend
+## Backend de TubeKids con GraphQL
 
-Este repositorio contiene el componente frontend del proyecto TubeKids, elaborado para el curso de **Programación en Ambiente Web II** de la Universidad Técnica Nacional. El objetivo principal es proporcionar una plataforma segura y personalizable donde los padres pueden gestionar y controlar el contenido audiovisual que sus hijos visualizan.
+El backend de TubeKids está diseñado para optimizar la gestión de contenido y la interacción de usuario mediante el uso de GraphQL, una tecnología de consulta avanzada que permite realizar búsquedas dinámicas y eficientes.
 
-## Backend con GraphQL
+### Uso de GraphQL en el Backend
 
-El backend de TubeKids está diseñado utilizando GraphQL, una tecnología avanzada para la gestión de consultas y manipulación de datos. Esta elección permite una interacción más eficiente y precisa entre el servidor y los clientes, facilitando el desarrollo de una plataforma altamente responsiva y adaptativa.
+GraphQL es el núcleo de nuestro backend, facilitando una interfaz flexible y potente para las consultas de datos. Al implementar GraphQL, buscamos proporcionar una experiencia de usuario superior con las siguientes ventajas:
 
-### Ventajas de Usar GraphQL en el Backend
+- **Consultas Específicas**: Los usuarios pueden obtener exactamente los datos que necesitan, sin sobre-carga de información innecesaria. Esto es crucial para mejorar la eficiencia y la velocidad de respuesta de nuestra plataforma.
 
-- **Consultas Eficientes**: GraphQL permite a los clientes solicitar exactamente los datos que necesitan, nada más y nada menos. Esto reduce el sobreenvío de información y la carga en la red.
+- **Reducción de Solicitudes al Servidor**: Al permitir múltiples operaciones en una sola solicitud, GraphQL reduce la necesidad de múltiples round-trips entre el cliente y el servidor, lo que resulta en un rendimiento mejorado y una menor latencia.
 
-- **Desarrollo Ágil**: Con GraphQL, los desarrolladores pueden agregar nuevas características y tipos de datos sin afectar las operaciones existentes, lo que hace que las iteraciones del producto sean más rápidas y menos propensas a errores.
+- **Actualizaciones en Tiempo Real**: Integraremos GraphQL Subscriptions para proporcionar actualizaciones en tiempo real a los usuarios, mejorando así la interactividad de la plataforma.
 
-- **Integración Sencilla con Frontend**: Dado que GraphQL ofrece una especificación clara y robusta para las interacciones entre el cliente y el servidor, facilita la sincronización entre el equipo de frontend y backend, mejorando la colaboración y la coherencia en el desarrollo.
+### Funcionalidades Clave Implementadas con GraphQL
 
-### Implementación
+- **Registro y Autenticación Mejorada**: Utilizaremos GraphQL para manejar los procesos de registro y autenticación, incluyendo la verificación de correo electrónico y la autenticación de dos factores. Esto asegura un proceso de registro fluido y seguro.
+  
+- **Búsqueda Avanzada de Videos**: Implementaremos consultas GraphQL para permitir una búsqueda avanzada y personalizada de videos, incluyendo la integración con la API de YouTube, lo que permitirá a los usuarios encontrar fácilmente contenido adecuado.
 
-La implementación de GraphQL en nuestro backend se realiza a través de un servidor GraphQL que expone un único endpoint. Este servidor es responsable de procesar las consultas, realizar las operaciones necesarias en la base de datos y devolver los resultados en el formato solicitado.
+- **Gestión de Perfiles y Playlists**: Las funcionalidades para listar y gestionar perfiles y playlists también se realizarán a través de GraphQL, proporcionando una forma más eficiente y organizada de manejar los datos.
 
-### Seguridad
+### Desarrollo y Mantenimiento
 
-El backend también implementa medidas de seguridad robustas para garantizar que solo los usuarios autorizados puedan realizar consultas y mutaciones específicas. Se utilizan técnicas como la autenticación, la autorización y la validación de consultas para proteger los datos y las funcionalidades del sistema.
+- **Desarrollo Ágil**: GraphQL nos permite modificar y ampliar nuestras capacidades de backend sin interrumpir los servicios existentes, facilitando un ciclo de desarrollo más ágil y flexible.
 
-### Tecnologías Utilizadas
+- **Documentación y Herramientas de Desarrollo**: La naturaleza auto-documentada de GraphQL mejora la colaboración entre los equipos de desarrollo y facilita la adopción de nuevas funcionalidades por parte de los desarrolladores.
 
-- **Node.js**: Como entorno de ejecución para el servidor.
-- **Apollo Server**: Una popular implementación de servidor GraphQL que se integra bien con diversas bases de datos y tiene un amplio soporte para middleware y herramientas de desarrollo.
+Este enfoque centrado en GraphQL no solo mejora la eficiencia del backend, sino que también alinea nuestra plataforma con las mejores prácticas de desarrollo moderno, garantizando una solución robusta y escalable para TubeKids.
 
-Este enfoque con GraphQL nos permite construir un backend que no solo es potente y flexible, sino también optimizado para ofrecer la mejor experiencia posible a los usuarios finales y a los desarrolladores que trabajan en el proyecto.
+## Instalación del Backend de TubeKids
 
+Para configurar y ejecutar el backend de TubeKids, sigue estos pasos detallados para asegurar que todo esté correctamente instalado y configurado.
 
 ### Prerrequisitos
 
-Antes de iniciar, asegúrate de tener instalado **Node.js** en tu sistema. Puedes descargarlo desde [Node.js official website](https://nodejs.org/).
+Antes de comenzar, necesitarás tener instalado Node.js y npm en tu sistema. Node.js es el entorno de ejecución para el servidor y npm es el gestor de paquetes que utilizaremos para instalar las librerías necesarias.
 
-### Clonación e Instalación
+1. Descarga e instala Node.js desde [Node.js official website](https://nodejs.org/).
 
-Para configurar el proyecto localmente, sigue estos pasos:
+### Configuración del Proyecto
 
-1. Clona el repositorio:
+Una vez instalado Node.js, procede con la configuración del proyecto:
+
+1. **Clonar el Repositorio**: Clona el código fuente del backend desde GitHub usando el siguiente comando:
+
    ```bash
-   git clone https://github.com/tu-usuario/tubekids-frontend.git
-   cd tubekids-frontend
-
-## Uso de GraphQL
-El proyecto utiliza GraphQL para permitir consultas eficientes y específicas, mejorando la carga de datos y la experiencia del usuario al interactuar con la plataforma. Esto asegura que solo se transfieran los datos necesarios y relevantes, optimizando así el rendimiento y la velocidad de la aplicación.
+   git clone https://github.com/tu-usuario/tubekids-backend.git
+   cd tubekids-backend
 
