@@ -38,6 +38,9 @@ const typeDefs = `
     getRestrictedUsers: [RestrictedUser!]!
     getUserVideos: [Video]
     getUserPlaylists: [Playlist]
+    getPlaylistsForRestrictedUser(profileId: ID!): [Playlist]
+    getVideosForRestrictedUser(profileId: ID!): [Video]
+    searchVideosForRestrictedUser(profileId: ID!, searchTerm: String!): [Video]
   }
 `;
 
