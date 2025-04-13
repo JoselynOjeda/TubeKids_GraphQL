@@ -1,6 +1,6 @@
-const { buildSchema } = require('graphql');
+const { makeExecutableSchema } = require('@graphql-tools/schema');
 
-const schema = buildSchema(`
+const typeDefs = `
   type Country {
     _id: ID!
     name: String!
@@ -15,12 +15,30 @@ const schema = buildSchema(`
     parentUser: ID!
   }
 
-  
+  type Video {
+    _id: ID!
+    userId: ID!
+    name: String!
+    url: String!
+    description: String
+    thumbnail: String
+  }
+
+  type Playlist {
+    _id: ID!
+    name: String!
+    description: String
+    assignedProfiles: [String!]!
+    videos: [ID!]!
+    userId: ID!
+  }
 
   type Query {
     getCountries: [Country!]!
     getRestrictedUsers: [RestrictedUser!]!
+    getUserVideos: [Video]
+    getUserPlaylists: [Playlist]
   }
-`);
+`;
 
-module.exports = { schema };
+module.exports = typeDefs;
