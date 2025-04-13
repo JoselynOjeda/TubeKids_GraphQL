@@ -7,8 +7,19 @@ const schema = buildSchema(`
     code: String!
   }
 
+  type RestrictedUser {
+    _id: ID!
+    name: String!
+    pin: String!
+    avatar: String!
+    parentUser: ID!
+  }
+
+  
+
   type Query {
     getCountries: [Country!]!
+    getRestrictedUsers: [RestrictedUser!]!
   }
 `);
 

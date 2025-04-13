@@ -1,9 +1,12 @@
 require('dotenv').config();
+const jwt = require('jsonwebtoken');
 const express = require("express");
 const mongoose = require("mongoose");
 const { createHandler } = require("graphql-http/lib/use/express");
 const { ruruHTML } = require("ruru/server");
 const cors = require("cors");
+const { graphqlHTTP } = require('express-graphql');
+
 
 const { schema } = require("./schema");   
 const { root } = require("./resolvers");  
@@ -19,10 +22,25 @@ mongoose.connect(process.env.DB_CONNECTION_STRING, {
 }).then(() => console.log("✅ Conectado a MongoDB"))
   .catch(err => console.error("❌ Error al conectar a MongoDB:", err));
 
-app.all("/graphql", createHandler({
-  schema,
-  rootValue: root,
-}));
+  app.use('/graphql', graphqlHTTP((req) => {
+    const authHeader = req.headers.authorization || '';
+    const token = authHeader.replace('Bearer ', '');
+    let user = null;
+  
+    if (token) {
+      try {
+        user = jwt.verify(token, 'tube_kids');
+      } catch (err) {
+        console.log('Invalid token:', err.message);
+      }
+    }
+  
+    return {
+      schema,
+      rootValue: root,
+      context: { user }
+    };
+  }));
 
 
 app.get("/", (_req, res) => {
