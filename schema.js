@@ -5,6 +5,7 @@ const typeDefs = `
     _id: ID!
     name: String!
     code: String!
+    phone_code: String!
   }
 
   type RestrictedUser {

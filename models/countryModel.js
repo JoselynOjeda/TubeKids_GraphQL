@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const countrySchema = new mongoose.Schema({
+const CountrySchema = new mongoose.Schema({
   name: String,
-  code: String
-});
+  code: String,
+  phone_code: String
+})
 
-module.exports = mongoose.model('Country', countrySchema);
+module.exports = mongoose.model("Country", CountrySchema)
